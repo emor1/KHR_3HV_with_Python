@@ -3,6 +3,7 @@
 
 """
 import numpy as np
+import math
 
 class uLinks:
     def __init__(self,name,sister,chiled):
@@ -65,6 +66,16 @@ def TotalMass(j):
         m=links[j].m+TotalMass(links[j].sister)+TotalMass(links[j].chiled)
     return m
 
+#順運動学
+def ForwardKinematics(j):
+    if j==0
+        return 0
+    if j!=1:
+        i=links.mother
+        links(j).p=links(i).R*uLinks(j).b+links(i).P
+        links(j).R=links(i).R*math.e(np.cross(links[j].a,links[j].p))
+    ForwardKinematics(links[i].sister)
+    ForwardKinematics(links[j].chiled)
 
 if __name__=="__main__":
     setup()
